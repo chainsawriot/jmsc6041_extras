@@ -8,9 +8,9 @@ A vector is like a container of multiple elements of the same type. (e.g. a vect
 ```{r}
 prime <- c(2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
 ```
-Visually, the vector `prime` is like a catepillar.
+Visually, the vector `prime` is like a caterpillar.
 
-
+[caterpillar](./img/caterpillar.png)
 
 ## Vector
 
