@@ -12,6 +12,10 @@ Visually, the vector `prime` is like a caterpillar.
 
 ![](./imgs/caterpillar.png "Bug?")
 
+"Subsetting a vector" is the operation of extracting element(s) from a vector. For example, you want to extract the elements 11 and 19 from the vector `prime`, visually it should be like this (a cruel image):
+
+![](./imgs/subsetting.png "debug?")
+
 ## Vector
 
 There are multiple ways to subset data from a vector using square brackets. The two common methods are:
