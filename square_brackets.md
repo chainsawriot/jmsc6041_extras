@@ -53,7 +53,7 @@ prime[c(1,3,length(prime))]
 
 #### Using logical vector
 
-Using a logical vector with the equal length of `prime` to select elements, only elements with the corresponding logical value being TRUE to be extract. For example:
+Using a logical vector with the equal length of `prime` to select elements, only elements with the corresponding logical value being TRUE will be extracted. For example:
 
 ```{r}
 # Do the above cruel subsetting operation, i.e. extracting 11 and 19
@@ -63,3 +63,28 @@ prime[c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE)]
 Visually, it should be like this
 
 ![](./imgs/logical.png "logical")
+
+```{r}
+# Revision excercise 3: Try to rewrite the following subsetting operation with a logical vector
+prime[c(1,3)]
+```
+##### Making query [IMPORTANT]
+
+In real life, we rarely know the position of the elements to be extracted. Usually, we extract elements from a vector based on the values. Combining the vectorised logical operation and subsetting vector using logical vector, we can make query on vectors. Let's revise a little bit about the vectorised logical operations.
+
+```{r}
+prime > 10
+prime != 29
+prime <= 23
+# Revision excercise  4: Explain to yourself the logic of the following logical operation
+prime %% 2 == 1 
+```
+
+The above vectorised logical operation will always evaluate to a logical vector with the equal length of `prime`. Therefore, we can make use of this to query the `prime` vector.
+
+```{r}
+prime[prime > 10]
+prime[prime != 29]
+prime[prime <= 23]
+prime[prime %% 2 == 1]
+```
