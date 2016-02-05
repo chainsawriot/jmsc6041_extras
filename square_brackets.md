@@ -53,4 +53,9 @@ prime[c(1,3,length(prime))]
 
 #### Using logical vector
 
-In real life operation, we will not always know the exact 
+Using a logical with the equal length of `prime` to select elements, only elements with the corresponding logical value being TRUE to be extract. For example:
+
+```{r}
+# Do the above cruel subsetting operation, i.e. extracting 11 and 19
+prime[c(FALSE, FALSE, FALSE, FALSE, TRUE, FALSE, FALSE, TRUE, FALSE, FALSE)]
+```
