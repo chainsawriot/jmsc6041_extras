@@ -91,6 +91,8 @@ prime[prime %% 2 == 1]
 ## Data frame
 
 ```{r}
-beatles <- data.frame(name = c('John', 'Paul', 'George', 'Ringo'), born = c(1940, 1942, 1943, 1940), alive = c(FALSE, TRUE, FALSE, TRUE))
+beatles <- data.frame(name = c('John', 'Paul', 'George', 'Ringo'),
+born = c(1940, 1942, 1943, 1940),
+alive = c(FALSE, TRUE, FALSE, TRUE))
 ```
 ![](./imgs/dataframe.png "many bugs")
