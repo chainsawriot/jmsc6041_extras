@@ -3,6 +3,8 @@ By Chung-hong Chan (@chainsawriot)
 
 Square brackets `[]` in R are for subseting vector, data.frame and list.
 
+## Vector
+
 A vector is like a container of multiple elements of the same type. (e.g. a vector of all numbers) For example, I can create a vector called `prime` that hold the first few prime numbers.
 
 ```{r}
@@ -12,15 +14,16 @@ Visually, the vector `prime` is like a caterpillar.
 
 ![](./imgs/caterpillar.png "Bug?")
 
+### Subsetting a vector
+
 "Subsetting a vector" is the operation of extracting element(s) from a vector. For example, you want to extract the elements 11 and 19 from the vector `prime`, visually it should be like this (a cruel image):
 
 ![](./imgs/subsetting.png "debug?")
 
-## Vector
 
 There are multiple ways to subset data from a vector using square brackets. The two common methods are:
 
-### Using positional index
+#### Using positional index
 
 Single numerical positional index
 
@@ -48,6 +51,6 @@ prime[c(1,3,length(prime))]
 # Revision excercise 3: how to the get the 19, 23 and 29 from the prime?
 ```
 
-### Using logical vector
+#### Using logical vector
 
 In real life operation, we will not always know the exact 
