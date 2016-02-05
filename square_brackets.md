@@ -125,7 +125,7 @@ beatles$name[1:3]
 Similarly, you can put logical vector into `i` and `j`. We usually use the logical vector in `i`.
 
 ```{r}
-# the same as beatles[c(1,3),]
+# the same as beatles[c(1,3,4),]
 beatles[c(TRUE, FALSE, TRUE, TRUE),]
 # Revision excercise 5: Explain the result of
 beatles[!beatles$alive,]
