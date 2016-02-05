@@ -122,7 +122,7 @@ beatles$name[1:3]
 # Revision excercise 4: Explain why the above have no j value inside the [].
 ```
 
-Similarly, you can put logical vector into `i` and `j`. We will usually use the logical vector in `i`.
+Similarly, you can put logical vector into `i` and `j`. We usually use the logical vector in `i`.
 
 ```{r}
 # the same as beatles[c(1,3),]
