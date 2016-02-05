@@ -90,9 +90,63 @@ prime[prime %% 2 == 1]
 ```
 ## Data frame
 
+Data frame is like a collection of vectors with same length. It is usually used to represent rectangular data. In the following `beatles` data frame, each row represents one single member of the Beatles.
+
 ```{r}
 beatles <- data.frame(name = c('John', 'Paul', 'George', 'Ringo'),
 born = c(1940, 1942, 1943, 1940),
 alive = c(FALSE, TRUE, FALSE, TRUE))
 ```
+
+Visually, it looks like this:
+
 ![](./imgs/dataframe.png "many bugs")
+
+You can use the above two methods to subset a data frame. However, a data frame is a 2D structure (it has rows and columns), therefore you need to subset it with two index values. Suppose we called them `i` and `j` with `i` being the row indices and `j` being the column indices. The notation for subsetting a data frame is `yourdataframe[i,j]`. Examples:
+
+```{r}
+# First row, i = 1
+beatles[1,]
+# First and Third rows, i = c(1,3)
+beatles[c(1,3),]
+# Second Column, j = 2
+beatles[,2]
+# It is the same as
+beatles$born
+# The third row, third colum, i = 3, j = 3
+beatles[3,3]
+# The first three rows, only the first colum, i = 1:3, j = 1
+beatles[1:3,1]
+# The same as
+beatles$name[1:3]
+# Revision excercise 4: Explain why the above have no j value inside the [].
+```
+
+Similarly, you can put logical vector into `i` and `j`. We will usually use the logical vector in `i`.
+
+```{r}
+# the same as beatles[c(1,3),]
+beatles[c(TRUE, FALSE, TRUE, TRUE),]
+# Revision excercise 5: Explain the result of
+beatles[!beatles$alive,]
+```
+
+You can also use vectorised logical operation on rows to query on a data frame.
+
+```{r}
+# Vectorised logical operation on the 'name' column
+beatles$name == 'John'
+# Select beatles with the name of 'John'
+beatles[beatles$name == 'John',]
+# Vectorised logical operation on the 'born' column
+beatles$born <= 1940
+# Select beatles who born <= 1940
+beatles[beatles$born <= 1940,]
+# Combining logical vectors with & operator
+# e.g. logical operation of born <= 1940 and still alive
+beatles$born <= 1940 & beatles$alive
+# Select beatles who born <= 1940 and still alive
+beatles[beatles$born <= 1940 & beatles$alive,]
+# Revision excercise: Explain the result of
+beatles$name[beatles$born <= 1940 & beatles$alive]
+```
