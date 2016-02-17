@@ -17,16 +17,32 @@ Another way to represent the same idea is to create a function, suppose we defin
 f(x) = x * 3.281
 ```
 
-`f` is the name of the function and `x` is the *argument* of that function. Merely defining a function will not give you the answer, you need to put such function into use to get the answer.
+`f` is the name of the function and `x` is the *argument* of that function. `x * 3.281` is the body of that function. Merely defining a function will not give you the answer, you need to put such function into use to get the answer.
 
 ```
 f(x = 552) = ?
 ```
 
-Well, how can we arrive at the answer? we can derive the answer using the *subsitution model*. In this example, when the argument x is 552, we can subsitute the value of x in the function definition with 552.
+How can we arrive at the answer? we can derive the answer using the *subsitution model*. In this example, when the argument x is 552, we can subsitute the value of x in the function body with 552.
 
 ```
 f(x = 552) = 552 * 3.281 = 1811.11
+```
+
+Excercise 1: The highest point of Tai Mo Shan is 957 metres. Convert it to feet using f(x) by subsitution.
+
+Similarly, you can define more functions for unit conversion, e.g.
+
+Celcius to Fahrenheit, g(c)
+
+```
+g(c) = c * (9/5) + 32
+```
+
+Currency conversion: from Hong Kong Dollars to Euro, h(hkd)
+
+```
+h(hkd) = hkd * 0.11533
 ```
 
 
