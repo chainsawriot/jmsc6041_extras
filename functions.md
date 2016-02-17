@@ -33,19 +33,37 @@ Excercise 1: The highest point of Tai Mo Shan is 957 metres. Convert it to feet 
 
 Similarly, you can define more functions for unit conversion, e.g.
 
-Celcius to Fahrenheit, g(c)
+Celcius to Fahrenheit, `g(c)`
 
 ```
 g(c) = c * (9/5) + 32
 ```
 
-Currency conversion: from Hong Kong Dollars to Euro, h(hkd)
+Currency conversion: from Hong Kong Dollar to Euro, `h(hkd)`
 
 ```
 h(hkd) = hkd * 0.11533
 ```
 
+And it is not only about mathematics. You can define a function to find out the capital city of a country, `i(country)`
 
+```
+i(country) = Google for country + "capital"
+```
 
+### A project: Area calculation
 
+The area of a square can be calculate with a function like this:
+
+```
+square(side_length) = side_length * side_length
+```
+
+This function can be defined in R as such:
+
+```{r}
+square_area <- function(side_length) {
+  return(side_length * side_length)
+}
+```
 
