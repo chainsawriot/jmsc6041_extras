@@ -58,7 +58,7 @@ The area of a square can be calculate with a function like this:
 ![](./imgs/square_area.png "Bug?")
 
 ```
-square(side_length) = side_length * side_length
+square_area(side_length) = side_length * side_length
 ```
 
 This function can be defined in R as such:
@@ -67,5 +67,13 @@ This function can be defined in R as such:
 square_area <- function(side_length) {
   return(side_length * side_length)
 }
+```
+
+Try to calculate the area of square using this function
+
+```{r}
+square_area(side_length = 68.9)
+### it can be shorthanded to
+square_area(68.9)
 ```
 
