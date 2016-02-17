@@ -55,6 +55,8 @@ i(country) = Google for country + "capital"
 
 The area of a square can be calculate with a function like this:
 
+![](./imgs/square_area.png "Bug?")
+
 ```
 square(side_length) = side_length * side_length
 ```
