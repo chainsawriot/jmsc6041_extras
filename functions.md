@@ -13,5 +13,23 @@ You may know 1 metres = 3.281 feet. Therefore, 552 metres can be converted into 
 
 Another way to represent the same idea is to create a function, suppose we define a function called `f(x)`
 
+```
+f(x) = x * 3.281
+```
+
+`f` is the name of the function and `x` is the *argument* of that function. Merely defining a function will not give you the answer, you need to put such function into use to get the answer.
+
+```
+f(x = 552) = ?
+```
+
+Well, how can we arrive at the answer? we can derive the answer using the *subsitution model*. In this example, when the argument x is 552, we can subsitute the value of x in the function definition with 552.
+
+```
+f(x = 552) = 552 * 3.281 = 1811.11
+```
+
+
+
 
 
