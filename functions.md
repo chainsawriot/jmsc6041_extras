@@ -1,4 +1,4 @@
-# Functions, Subsitution model and scope
+# Functions, Subsitution model and namespace
 By Chung-hong Chan (@chainsawriot)
 
 ## Functions: in a non-computer context
@@ -86,7 +86,6 @@ To define it as a function, you need to define a function with two arguments.
 ```
 triangle_area(base, height) = (base * height) / 2
 ```
-
 This function can be defined in R as such:
 
 ```{r}
@@ -118,4 +117,61 @@ house_area(side_length, base, height) = square_area(side_length) + triangle_area
 house_area <- function(side_length, base, height) {
   return(square_area(side_length) + triangle_area(base, height))
 }
+```
+
+### Intermediates
+
+Programs are meant to be read by human. A better approach is to make it clear to use.
+
+You can create `intermediates` in your function (such as bottom_area and upper_area) so that you know the 'house' area is actually a combination of square and triangle area.
+
+```{r}
+house_area2 <- function(side_length, base, height) {
+    bottom_area <- square_area(side_length)
+    upper_area <- triangle_area(base, height)
+	return(bottom_area + upper_area)
+}
+```
+
+A side note about those intermediates. You cannot get back those intermediates after you use that function. i.e.
+
+```{r}
+house_area2(10, 14, 5)
+bottom_area # Error: object 'bottom_area' not found
+```
+
+It is related to a concept called "Namespace". But it is beyond the scope of this class and what you need to know (now) is that you can only get back the returned value.
+
+### Window
+
+Suppose you need to calculate the area of a new version of `house`. It has one circular window.
+
+Given the area of circle is: radius * radius * 3.1416
+
+Modify `house_area2` to `house_area3` so that it can calcuate the area of the new house.
+
+
+```{r}
+house_area3 <- function(side_length, base, height, radius) {
+    bottom_area <- square_area(side_length)
+    upper_area <- triangle_area(base, height)
+	window_area <- radius * radius * 3.1416
+	return(bottom_area + upper_area - window_area)
+}
+house_area3(10, 14, 5, 2)
+```
+
+### default argument
+
+Suppose the radius of window is usually be 2. You can put this as default like this.
+
+```{r}
+house_area3 <- function(side_length, base, height, radius = 2) {
+    bottom_area <- square_area(side_length)
+    upper_area <- triangle_area(base, height)
+	window_area <- radius * radius * 3.1416
+	return(bottom_area + upper_area - window_area)
+}
+house_area3(10, 14, 5) # radius will be by default 2
+house_area3(10, 14, 5, 1) # You can still use other value
 ```
