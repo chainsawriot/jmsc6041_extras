@@ -77,3 +77,45 @@ square_area(side_length = 68.9)
 square_area(68.9)
 ```
 
+For the area of triangle, you might know that it is calculated as: (base * height) / 2
+
+![](./imgs/triangle.png "Bug?")
+
+To define it as a function, you need to define a function with two arguments.
+
+```
+triangle_area(base, height) = (base * height) / 2
+```
+
+This function can be defined in R as such:
+
+```{r}
+triangle_area <- function(base, height) {
+  return((base * height) / 2)
+}
+```
+
+
+Try to calculate the area of triangle using this function
+
+```{r}
+triangle_area(base = 92.8, height = 68.9)
+### it can be shorthanded to
+triangle_area(92.8, 68.9)
+```
+
+Now, you need to build a function to calculate the area of a 'house' like this
+
+![](./imgs/house.png "Bug?")
+
+You can actually reuse the `square_area` and `triangle_area` you have just defined to calculate the 'house' area.
+
+```
+house_area(side_length, base, height) = square_area(side_length) + triangle_area(base, height)
+```
+
+```{r}
+house_area <- function(side_length, base, height) {
+  return(square_area(side_length) + triangle_area(base, height))
+}
+```
