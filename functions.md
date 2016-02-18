@@ -121,7 +121,7 @@ house_area <- function(side_length, base, height) {
 
 ### Intermediates
 
-Programs are meant to be read by human. A better approach is to make it clear to use.
+Programs are meant to be read by human. A better approach is to write it clearly so that we know how it works.
 
 You can create `intermediates` in your function (such as bottom_area and upper_area) so that you know the 'house' area is actually a combination of square and triangle area.
 
@@ -145,6 +145,8 @@ It is related to a concept called "Namespace". But it is beyond the scope of thi
 ### Window
 
 Suppose you need to calculate the area of a new version of `house`. It has one circular window.
+
+![](./imgs/house2.png "Bug?")
 
 Given the area of circle is: radius * radius * 3.1416
 
